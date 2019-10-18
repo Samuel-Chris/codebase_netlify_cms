@@ -67,5 +67,8 @@ section5:
   subheading: >-
     Join our Discord community to share knowledge, network and get feedback on
     your startup idea.
+section6:
+  heading: test
+  subheading: text
 ---
 
