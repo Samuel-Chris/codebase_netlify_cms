@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout'
 import { graphql } from 'gatsby'
 import Section1B from '../components/pricing-page/Section1B'
 import {default as Section2} from '../components/heroes/Hero4'
-import {default as Section3} from '../components/heroes/Hero5'
+import Hero5 from '../components/heroes/Hero5'
 import SEO from '../components/SEO/Seo'
 
 export class PricingPageTemplate extends Component {
@@ -33,7 +33,7 @@ export class PricingPageTemplate extends Component {
                 <SEO title={meta_title} description={meta_description} pathname={path} />
                 <Section1B content={section1} isMobile={this.state.isMobile}/>
                 <Section2 content={section2}/>
-                <Section3 content={section3}/>
+                <Hero5 content={section3}/>
             </Layout>
         );
     }

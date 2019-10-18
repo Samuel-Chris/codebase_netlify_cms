@@ -29,10 +29,10 @@ export class IndexPageTemplate extends React.Component {
     
 
     render() {
-        const {section1, section2, section3, section4, section5, meta_title, meta_description, image, path} = this.props;
+        const {section1, section2, section3, section4, section5, seo, path} = this.props;
         return (
             <Layout>
-                <SEO title={meta_title} description={meta_description} image={image.publicURL} pathname={path}/>
+                <SEO title={seo.meta_title} description={seo.meta_description} image={seo.image.publicURL} pathname={path}/>
                 <Hero1 content={section1}/>
                 <Hero2 isMobile={this.state.isMobile} content={section2}/>
                 <Hero3 content={section3}/>
@@ -51,17 +51,13 @@ const IndexPage = ({ data }) => {
   
     return (
         <IndexPageTemplate
-          image={frontmatter.image}
-          title={frontmatter.title}
-          subtitle={frontmatter.subtitle}
+          seo={frontmatter.seo}
           subheading={frontmatter.subheading}
           section1={frontmatter.section1}
           section2={frontmatter.section2}    
           section3={frontmatter.section3}    
           section4={frontmatter.section4}    
           section5={frontmatter.section5}
-          meta_title={frontmatter.meta_title}
-          meta_description={frontmatter.meta_description}
           path={frontmatter.path}
         />
     )
@@ -75,12 +71,14 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        meta_title
-        meta_description
-        image {
-          publicURL
-        }
         path
+        seo {
+          meta_title
+          meta_description
+          image {
+            publicURL
+          }
+        }
         section1 {
           heading
           description
