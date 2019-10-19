@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../button/Button'
 import Img from 'gatsby-image'
+import defaultImage from '../../assets/images/word_of_mouth.png'
 
 export default function Section3(props) {
     const {image, heading, subheading} = props.content 
@@ -14,7 +15,7 @@ export default function Section3(props) {
                 </div>
                 <div className="col-6 img-container">
                     {/* <Img style={{width: '100%'}} fluid={image.childImageSharp.fluid} alt=""/> */}
-                    <img src={image.publicURL} alt=""/>
+                    {image.publicURL ? <img src={image.publicURL} alt=""/> : <img src={defaultImage} alt=""/>}
                 </div>
             </div>
         </div>
