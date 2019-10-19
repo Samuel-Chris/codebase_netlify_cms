@@ -11,7 +11,7 @@ collections:
     folder: "src/pages/blog"
     filter: {field: "templateKey", value: "blog-post"}
     create: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "visible", name: "visible", widget: "hidden", default: "true"}
