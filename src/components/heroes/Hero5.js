@@ -4,7 +4,8 @@ import defaultImage from '../../assets/images/word_of_mouth.png'
 import Img from 'gatsby-image'
 
 export default function Section3(props) {
-    const {image, heading, subheading} = props.content 
+    const {image, heading, subheading} = props.content
+    console.log(image.publicURL);
     return (
         <div className="hero hero6">
             <div className="grid-wrapper">
@@ -15,7 +16,7 @@ export default function Section3(props) {
                 </div>
                 <div className="col-6 img-container">
                     {/* <Img style={{width: '100%'}} fluid={image.childImageSharp.fluid} alt=""/> */}
-                    {image.publicURL ? <img src={image.publicURL} alt=""/> : <img src={defaultImage} alt=""/>}
+                    {image.publicURL!=="" ? <img src={image.publicURL} alt=""/> : <img src={defaultImage} alt=""/>}
                 </div>
             </div>
         </div>
