@@ -13,7 +13,8 @@ export default function Section3(props) {
                     <a href="https://discord.gg/r3j7Byh" target="_blank" rel="noopener noreferrer"><Button white width="15.625rem">Join Us</Button></a>
                 </div>
                 <div className="col-6 img-container">
-                    <Img style={{width: '100%'}} fluid={image.childImageSharp.fluid} alt=""/>
+                    {/* <Img style={{width: '100%'}} fluid={image.childImageSharp.fluid} alt=""/> */}
+                    <img src={image.publicURL} alt=""/>
                 </div>
             </div>
         </div>

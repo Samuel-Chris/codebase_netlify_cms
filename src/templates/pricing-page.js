@@ -74,6 +74,7 @@ export const pageQuery = graphql`
           heading
           subheading
           image {
+            publicURL
             childImageSharp {
               fluid(maxWidth: 400) {
                 ...GatsbyImageSharpFluid

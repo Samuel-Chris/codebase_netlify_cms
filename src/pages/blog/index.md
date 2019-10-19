@@ -1,6 +1,6 @@
 ---
 meta_title: Blog
-meta_description: 
+meta_description: blog
 templateKey: blog-page
 path: /blog
 visible: false
