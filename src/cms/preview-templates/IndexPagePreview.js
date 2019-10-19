@@ -15,7 +15,13 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         section2={data.section2 || { blurbs: []}}
         section3={data.section3 || { blurbs: []}}
         section4={data.section4 || {}}
-        section5={data.section5 || {}}
+        section5={{
+          heading: data.section5.heading,
+          subheading: data.section5.subheading,
+          image: {
+            publicURL: ""
+          }
+        }}
         path={data.path}
       />
     )
