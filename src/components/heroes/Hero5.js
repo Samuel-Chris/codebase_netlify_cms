@@ -15,7 +15,8 @@ export default function Section3(props) {
                 </div>
                 <div className="col-6 img-container">
                     {/* <Img style={{width: '100%'}} fluid={image.childImageSharp.fluid} alt=""/> */}
-                    {image.publicURL ? <img src={image.publicURL} alt=""/> : <img src={defaultImage} alt=""/>}
+                    {/* {image.publicURL ? <img src={image.publicURL} alt=""/> : <img src={defaultImage} alt=""/>} */}
+                    <img src={defaultImage} alt=""/>
                 </div>
             </div>
         </div>
