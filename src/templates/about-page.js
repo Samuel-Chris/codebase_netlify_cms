@@ -7,7 +7,7 @@ import Section3 from '../components/about-page/Section3'
 import Section4 from '../components/about-page/Section4'
 import Section5 from '../components/about-page/Section5'
 import {default as Section6} from '../components/heroes/Hero4'
-import {default as Section7} from '../components/heroes/Hero5'
+import Hero5 from '../components/heroes/Hero5'
 import SEO from '../components/SEO/Seo'
 
 
@@ -41,7 +41,7 @@ export class AboutPageTemplate extends React.Component {
                 <Section4 content={section4}/>
                 <Section5 content={section5}/>
                 <Section6 content={section6}/>
-                <Section7 content={section7}/>
+                <Hero5 content={section7}/>
             </Layout>
         );
     }
