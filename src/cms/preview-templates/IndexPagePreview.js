@@ -23,7 +23,32 @@ const IndexPagePreview = ({ entry, getAsset }) => {
             publicURL: ""
           } 
         }}
-        section2={data.section2}
+        section2={{
+          heading: data.section2.heading,
+          blurbs: [
+            {
+              heading: data.section2.blurbs[0].heading,
+              description: data.section2.blurbs[0].description,
+              image: {
+                publicURL: ""
+              }
+            },
+            {
+              heading: data.section2.blurbs[1].heading,
+              description: data.section2.blurbs[1].description,
+              image: {
+                publicURL: ""
+              }
+            },
+            {
+              heading: data.section2.blurbs[2].heading,
+              description: data.section2.blurbs[2].description,
+              image: {
+                publicURL: ""
+              }
+            }
+          ]
+        }}
         section3={{
           blurbs: data.section3.blurbs,
           heading: {
