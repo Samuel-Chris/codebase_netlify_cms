@@ -4,16 +4,37 @@ import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  console.log(data.image.publicURL);
+  console.log(data.section3.heading.image.publicURL);
+  console.log(data.section5.image.publicURL);
 
   if (data) {
     return (
       <IndexPageTemplate
-        image={data.image}
+        image={{
+          publicURL: ""
+        }}
         metaDescription={data.meta_description}
         metaTitle={data.meta_title} 
-        section1={data.section1 || {}}
-        section2={data.section2 || { blurbs: []}}
-        section3={data.section3 || { blurbs: []}}
+        section1={{
+          heading: data.section1.heading,
+          description: data.section1.description,
+          image: {
+            publicURL: ""
+          } 
+        }}
+        section2={data.section2}
+        section3={{
+          blurbs: data.section3.blurbs,
+          heading: {
+            description: data.section3.heading.description,
+            heading: data.section3.heading.heading,
+            subheading: data.section3.heading.subheading,
+            image: {
+              publicURL: ""
+            }
+          }
+        }}
         section4={data.section4 || {}}
         section5={{
           heading: data.section5.heading,
