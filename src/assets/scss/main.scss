@@ -1497,7 +1497,7 @@ h1.lead, h3.lead {
 }
 
 .four04 {
-	display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1505,5 +1505,9 @@ h1.lead, h3.lead {
 	p {
 		text-align: center;
 	}
+}
+
+.join p {
+     opacity: 75% !important;
 }
 
