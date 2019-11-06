@@ -76,25 +76,41 @@ module.exports = {
           },
         },
         {
-          resolve: `gatsby-plugin-google-analytics`,
+          resolve: `gatsby-plugin-gdpr-cookies`,
           options: {
-            trackingId: "UA-141693263-1",
-            head: true,
+            googleAnalytics: {
+              trackingId: 'UA-141693263-1',
+              head: true,
+              // Setting this parameter is optional
+              anonymize: true
+            },
+            facebookPixel: {
+              pixelId: '407626136581094'
+            },
+            // Defines the environments where the tracking should be available  - default is ["production"]
+            environments: ['production', 'development']
           },
         },
-        {
-          resolve: `gatsby-plugin-facebook-pixel`,
-          options: {
-            pixelId: '407626136581094',
-          },
-        },
-        {
-          resolve: `gatsby-plugin-hotjar`,
-          options: {
-            id: 1381054,
-            sv: 6
-          },
-        },
+        // {
+        //   resolve: `gatsby-plugin-google-analytics`,
+        //   options: {
+        //     trackingId: "UA-141693263-1",
+        //     head: true,
+        //   },
+        // },
+        // {
+        //   resolve: `gatsby-plugin-facebook-pixel`,
+        //   options: {
+        //     pixelId: '407626136581094',
+        //   },
+        // },
+        // {
+        //   resolve: `gatsby-plugin-hotjar`,
+        //   options: {
+        //     id: 1381054,
+        //     sv: 6
+        //   },
+        // },
         {
           resolve: `@mangoart/gatsby-plugin-purechat`,
           options: {

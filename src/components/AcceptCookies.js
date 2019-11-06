@@ -19,7 +19,10 @@ export default class AcceptCookies extends Component {
 
     updateClass() {
         this.setState({class: "cookie-banner fade-out-bottom"})
-        cookie.save('acceptedCookies', true)
+        var date = new Date();
+        date.setTime(date.getTime()+(365*24*60*60*1000));
+        var d = date.toGMTString();
+        cookie.set("gatsby-gdpr-google-analytics", true, {path: "/", expires: d});
     }
 
     render() {
