@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../button/Button'
+import LazyLoad from 'react-lazyload'
 import Img from 'gatsby-image'
 
 export default function Hero5(props) {
@@ -13,7 +14,9 @@ export default function Hero5(props) {
                     <a href="https://discord.gg/r3j7Byh" target="_blank" rel="noopener noreferrer"><Button white width="15.625rem">Join Us</Button></a>
                 </div>
                 <div className="col-6 img-container">
-                    <Img style={{width: '100%'}} fluid={image.childImageSharp.fluid} alt=""/>
+                    <LazyLoad height="100%">
+                        <Img style={{width: '100%'}} fluid={image.childImageSharp.fluid} alt=""/>
+                    </LazyLoad>
                 </div>
             </div>
         </div>

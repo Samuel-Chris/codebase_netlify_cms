@@ -3,6 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import "animate.css/animate.min.css"
 import Button from '../button/Button'
 import './hero-styles.scss'
+import LazyLoad from 'react-lazyload'
 import {Link} from 'gatsby'
 
 export default function Hero2({content}) {
@@ -24,7 +25,9 @@ export default function Hero2({content}) {
                         <div key={index} className="col-4 hero2-item">
                             <ScrollAnimation animateOnce={true} animateIn="fadeInUp">
                             <span className="image icon">
-                                <img src={item.image.publicURL} alt={item.heading}/>    
+                                <LazyLoad height="100%">
+                                    <img src={item.image.publicURL} alt={item.heading}/>  
+                                </LazyLoad>
                             </span>
                             <h3 className="lead">{item.heading}</h3>
                             <p>{item.text}</p>

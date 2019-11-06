@@ -1,6 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import Zoom from 'react-reveal/Zoom'
+import LazyLoad from 'react-lazyload'
 import './hero-styles.scss'
 
 
@@ -33,7 +34,9 @@ export default function Hero3(props) {
 
                 <div className="col-5 img-container">
                     <Zoom>
+                        <LazyLoad height="100%">
                         <img src={heading.image.publicURL} alt=""/>
+                        </LazyLoad>
                     </Zoom>
                 </div>
             </div>

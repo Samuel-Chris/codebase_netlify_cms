@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../button/Button'
 import Fade from 'react-reveal/Fade'
 import './hero-styles.scss'
+import LazyLoad from 'react-lazyload'
 import { Link, animateScroll as scroll } from "react-scroll"
 
 
@@ -20,7 +21,9 @@ export default function Hero1(props) {
 
                 <div className="col-5 img-container">
                    <Fade right>
-                    <img src={image.publicURL} alt="Image"/> 
+                    <LazyLoad height="100%">
+                        <img src={image.publicURL} alt="Image"/>
+                    </LazyLoad> 
                    </Fade>
                 </div>
            </div>
