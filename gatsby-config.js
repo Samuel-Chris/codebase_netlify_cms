@@ -70,17 +70,17 @@ module.exports = {
           },
         },
         {
-          resolve: `gatsby-plugin-gdpr-cookies`,
+          resolve: `gatsby-plugin-google-analytics`,
           options: {
-            googleAnalytics: {
-              trackingId: 'UA-141693263-1',
-              head: false,
-              // Setting this parameter is optional
-              anonymize: true
-            },
-            facebookPixel: {
-              pixelId: '407626136581094'
-            },
+            trackingId: 'UA-141693263-1',
+            head: false,
+            anonymize: true,
+          },
+        },
+        {
+          resolve: `gatsby-plugin-facebook-pixel`,
+          options: {
+            pixelId: '407626136581094',
           },
         },
         {
