@@ -62,12 +62,6 @@ module.exports = {
         'gatsby-plugin-sass',
         `gatsby-plugin-sitemap`,
         'gatsby-plugin-offline',
-        // {
-        //   resolve:'gatsby-plugin-layout',
-        //   options: {
-        //     component: require.resolve('./src/components/layout/Layout')
-        //   }
-        // },
         {
           resolve: 'gatsby-plugin-netlify-cms',
           options: {
@@ -80,37 +74,22 @@ module.exports = {
           options: {
             googleAnalytics: {
               trackingId: 'UA-141693263-1',
-              head: true,
+              head: false,
               // Setting this parameter is optional
               anonymize: true
             },
             facebookPixel: {
               pixelId: '407626136581094'
             },
-            // Defines the environments where the tracking should be available  - default is ["production"]
-            environments: ['production', 'development']
           },
         },
-        // {
-        //   resolve: `gatsby-plugin-google-analytics`,
-        //   options: {
-        //     trackingId: "UA-141693263-1",
-        //     head: true,
-        //   },
-        // },
-        // {
-        //   resolve: `gatsby-plugin-facebook-pixel`,
-        //   options: {
-        //     pixelId: '407626136581094',
-        //   },
-        // },
-        // {
-        //   resolve: `gatsby-plugin-hotjar`,
-        //   options: {
-        //     id: 1381054,
-        //     sv: 6
-        //   },
-        // },
+        {
+          resolve: `gatsby-plugin-hotjar`,
+          options: {
+            id: 1381054,
+            sv: 6
+          },
+        },
         {
           resolve: `@mangoart/gatsby-plugin-purechat`,
           options: {
