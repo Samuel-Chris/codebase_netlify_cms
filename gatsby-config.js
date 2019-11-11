@@ -89,14 +89,14 @@ module.exports = {
         //     sv: 6
         //   },
         // },
-        // {
-        //   resolve: `@mangoart/gatsby-plugin-purechat`,
-        //   options: {
-        //     // PureChat js snippet
-        //     enabled: true,
-        //     websiteId: `bd18f713-df8e-4782-9532-e519766415d4`, 
-        //   },
-        // },
+        {
+          resolve: `@mangoart/gatsby-plugin-purechat`,
+          options: {
+            // PureChat js snippet
+            enabled: true,
+            websiteId: `bd18f713-df8e-4782-9532-e519766415d4`, 
+          },
+        },
         {
           resolve: `gatsby-plugin-manifest`,
           options: {
