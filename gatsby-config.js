@@ -83,13 +83,13 @@ module.exports = {
             pixelId: '407626136581094',
           },
         },
-        // {
-        //   resolve: `gatsby-plugin-hotjar`,
-        //   options: {
-        //     id: 1381054,
-        //     sv: 6
-        //   },
-        // },
+        {
+          resolve: `gatsby-plugin-hotjar`,
+          options: {
+            id: 1381054,
+            sv: 6
+          },
+        },
         {
           resolve: `@mangoart/gatsby-plugin-purechat`,
           options: {
