@@ -77,18 +77,19 @@ module.exports = {
         //     anonymize: true,
         //   },
         // },
-        // {
-        //   resolve: `gatsby-plugin-facebook-pixel`,
-        //   options: {
-        //     pixelId: '407626136581094',
-        //   },
-        // },
         {
-          resolve: `gatsby-plugin-hotjar`,
+          resolve: `gatsby-plugin-facebook-pixel`,
           options: {
+            pixelId: '407626136581094',
+          },
+        },
+        {
+          resolve: `gatsby-plugin-hotjar-tracking`,
+          options: {
+            includeInDevelopment: false,
             id: 1381054,
             sv: 6
-          },
+          }
         },
         {
           resolve: `@mangoart/gatsby-plugin-purechat`,
